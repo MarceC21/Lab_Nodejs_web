@@ -13,9 +13,9 @@ const server = http.createServer(async (req, res) => {
   }
 
 
-
+  // Ruta de información
   if (req.url === "/info") {
-    res.writeHead(200, { "Content-Type": "application-json" })
+    res.writeHead(200, { "Content-Type": "text/plain" }) // Se cambio el tipo de contenido a text/plain
     res.end("Ruta de información")
     return
   }

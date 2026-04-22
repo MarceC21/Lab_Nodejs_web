@@ -48,3 +48,23 @@ A esto:
 ```
 
 
+## Cambio 3: Corrección de la ruta /info
+
+Inicialmente, la ruta /info utilizaba un "Content-Type": "application-json", lo cuàl estarìa incorrecto
+
+Ya que el navegador interpretara mal la respuesta.
+
+Y se miraba asi: Ruta de informaciÃ³n
+
+Entonces se corrigió a:
+
+res.writeHead(200, { "Content-Type": "text/plain" })
+
+Ya que la respuesta es texto simple y no un objeto JSON
+
+
+
+
+
+
+
