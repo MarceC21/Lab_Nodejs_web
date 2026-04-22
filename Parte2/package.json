@@ -1,0 +1,13 @@
+{
+  "name": "parte2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server-bueno.js",
+  "scripts": {
+    "start": "node server-bueno.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
