@@ -20,13 +20,32 @@ const server = http.createServer(async (req, res) => {
   if (req.url === "/info") {
     res.writeHead(200, { "Content-Type": "application/json" })
     const info = {
-        Mensaje: "La info del servidor/lab",
-        Curso: "Sistemas y tecologías web",
-        Tecnología: "JavaScript y Node.js"
+        mensaje: "La info del servidor/lab",
+        curso: "Sistemas y tecologías web",
+        tecnologia: "JavaScript y Node.js"
     }
-    res.end(JSON.stringify(info))
+    res.end(JSON.stringify(info)) //Ahora si se usa para pasar de JS a JSON
     return
 }
+
+  //Ruta para saludo
+  if (req.url === "/saludo") {
+    res.writeHead(200, { "Content-Type": "text/plain" })
+    res.end("Hola auxiliar. Suerte calificando el lab :D")
+    return
+  }
+
+  //Ruta de Status
+  if (req.url === "/api/status") {
+    res.writeHead(200, { "Content-Type": "application/json" })
+    const status = {
+        ok: true, //supongo que asi se pone
+        Status: "Servidor funcionando correctamente",
+        Puerto: PORT
+    }
+    res.end(JSON.stringify(status)) //Ahora si se usa para pasar de JS a JSON
+    return
+  }
 
 
   // Ruta de estudiantes
